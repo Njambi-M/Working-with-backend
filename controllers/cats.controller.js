@@ -19,3 +19,14 @@ exports.delete = (req,res) => {
         res.status(404).send("Cat not found");
     }
 };
+exports.update = (req, res) => {
+    const { oldName, newName } = req.params;
+    const index = cats.indexOf(oldName);
+    if (index !== -1) {
+        cats[index] = newName;
+        res.send("Updated cat from " + oldName + " to " + newName);
+    } else {
+        res.status(404).send("Cat not found");
+    }
+};
+
