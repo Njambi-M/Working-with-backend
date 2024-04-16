@@ -6,3 +6,6 @@ exports.create = (req,res) =>{
     res.send("Cat created: " + name); 
 };
 
+exports.read = (req, res) => {
+    res.send(cats);
+};
