@@ -16,6 +16,17 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+
+const port2 = 5000;
+
+const todoRouter = require(".routes/todo.router");
+
+app.use(express.json()); // Middleware to parse JSON bodies
+
+app.use('/todos', todoRouter);
+app.listen(port2, () => {
+  console.log(`Example app listening on port ${port2}`)
+})
 // app.get('/', (req,res) => {
 // res.send('root')
 // })
