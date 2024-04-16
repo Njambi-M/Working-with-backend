@@ -14,4 +14,9 @@ exports.createTodo = (req, res) => {
   res.status(201).json(newTodo);
 };
 
+exports.readTodos = (req, res) => {
+  res.json(todos);
+};
+
+
 
