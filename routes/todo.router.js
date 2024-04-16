@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const todoController = require("./todo.controller");
+const todoController = require("../controllers/todo.controller");
 
 router.post('/', todoController.createTodo);
 router.get('/', todoController.readTodos);
+router.put('/:id', todoController.updateTodo);
+router.delete('/:id', todoController.deleteTodo);
 
 module.exports = router;
